@@ -1,5 +1,5 @@
 NAME = main
-SOURCES = main.cpp ClapTrap.class.cpp
+SOURCES = main.cpp ClapTrap.class.cpp ScavTrap.class.cpp
 
 OBJECTS = $(SOURCES:.cpp=.o)
 
