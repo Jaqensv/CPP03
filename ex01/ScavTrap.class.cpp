@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:29:01 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/03/13 13:46:19 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/03/15 17:25:47 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,11 @@ ScavTrap::ScavTrap(std::string name)
     _energy = 50;
     _damage = 20;
     std::cout << "ScavTrap " << name <<" constructor called" << std::endl;
+}
+
+ScavTrap::ScavTrap(const ScavTrap& other)
+{
+    std::cout << "ScavTrap copy constructor called" << std::endl;
 }
 
 ScavTrap::~ScavTrap() 

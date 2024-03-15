@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 14:33:48 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/03/13 13:37:31 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/03/15 17:36:46 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,27 @@ ClapTrap::ClapTrap(std::string name) : _hp(10), _energy(10), _damage(0), _name(n
     std::cout << "ClapTrap " << name <<" constructor called" << std::endl;
 }
 
+ClapTrap::ClapTrap(const ClapTrap& other)
+{
+    *this = other; // cette ligne appelle la surcharge d'operateur =
+    std::cout << "ClapTrap copy constructor called" << std::endl;
+}
+
+// Claptrap A("steeve");
+//Claptrap B = new Claptrap(A);
+
 ClapTrap::~ClapTrap() {
     std::cout << "ClapTrap destructor called" << std::endl;
+}
+
+ClapTrap& ClapTrap::operator=(const ClapTrap &other)
+{
+    this->_name = other._name;
+    this->_hp = other._hp;
+    this->_damage = other._damage;
+    this->_energy = other._energy;
+
+    return (*this);
 }
 
 void ClapTrap::setName(std::string name) {
