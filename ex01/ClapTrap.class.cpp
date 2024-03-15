@@ -6,14 +6,14 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 14:33:48 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/03/08 13:10:14 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/03/13 13:37:31 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.class.hpp"
 
 ClapTrap::ClapTrap() : _hp(10), _energy(10), _damage(0) {
-    std::cout << "basic ClapTrap constructor called" << std::endl;
+    std::cout << "Basic ClapTrap constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : _hp(10), _energy(10), _damage(0), _name(name) {

@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:27:57 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/03/08 13:34:37 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/03/13 13:44:48 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ class ScavTrap : public ClapTrap
         ScavTrap();
         ScavTrap(std::string name);
         ~ScavTrap();
-        //ScavTrap& operator=(const ScavTrap &other);
-    protected:
+        ScavTrap& operator=(const ScavTrap &other);
         void guardGate();
 };
 
